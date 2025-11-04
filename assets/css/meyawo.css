@@ -71,7 +71,34 @@
         .video-item video:hover {
             transform: scale(1.03);
         }
+  /* Style for the button */
+  #backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #695aa6;
+    color: white;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
 
+  #backToTop:hover {
+    background-color: #333;
+  }
+
+  /* Just to add scrollable content for demo */
+  .content {
+    height: 2000px;
+    background: linear-gradient(white, lightblue);
+  }
+  
 /* Social Icon Styling */
 .social-icons {
     list-style: none;

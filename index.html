@@ -27,10 +27,19 @@
                     <a class="link" href="#about">About</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#portfolio">Portfolio</a>
+                    <a class="link" href="#service">Service</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#skills">Skills</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#works">Works</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#videos">Videos</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#contact">Contact</a>
@@ -123,7 +132,6 @@
         </div>
     </div>
     </section>
-
     <!-- ===== END ABOUT SECTION ===== -->
 
     <!-- service section -->
@@ -475,7 +483,28 @@
         </footer>
     </div>
 
+    <!-- Back to Top button -->
+    <button id="backToTop" title="Go to top">↑ Top</button>
+
     <script>
+
+        // Get the button
+        const backToTopBtn = document.getElementById("backToTop");
+
+        // Show the button when the user scrolls down 100px
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopBtn.style.display = "block";
+            } else {
+            backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to top smoothly when the button is clicked
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        
         const roles = ["Developer", "Singer", "Guitarist", "Video editor"];
         const roleElement = document.getElementById("role");
         let roleIndex = 0;
