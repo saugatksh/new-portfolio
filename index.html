@@ -347,9 +347,8 @@
             </div>
         </div>
     </section>
-
-
-    
+    <!-- end of works section -->
+      
     <!-- videos section -->
     <section class="section" id="videos">
         <div class="container text-center">
@@ -487,6 +486,11 @@
     <button id="backToTop" title="Go to top">↑ Top</button>
 
     <script>
+
+        document.getElementById('visitWorksBtn').addEventListener('click', function() {
+            const aboutSection = document.getElementById('about');
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        });
 
         // Get the button
         const backToTopBtn = document.getElementById("backToTop");
