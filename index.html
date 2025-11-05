@@ -442,34 +442,61 @@
     </section>
     <!-- end of portfolio section -->
 
-    <!-- Contact Section -->
-    <section class="section" id="contact" style="background: #f9f9f9; padding: 80px 0;">
-        <div class="container text-center">
-            <p class="section-subtitle" style="color: #6c757d; font-weight: 500; letter-spacing: 1px;">How can you communicate?</p>
-            <h2 class="section-title mb-5" style="font-size: 2.5rem; font-weight: 700; color: #343a40;">Contact Me</h2>
+        <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+                    <form action="send_mail.php" method="POST" class="contact-form bg-white p-5 rounded-4 shadow-lg border border-light">
+                        <h3 class="mb-4 text-center fw-bold text-primary">Get in Touch</h3>
+                        <p class="text-center text-muted mb-4">We’d love to hear from you! Fill out the form below and we’ll get back to you soon.</p>
 
-            <form action="send_mail.php" method="POST" class="contact-form col-md-10 col-lg-8 m-auto" style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s;">
-                <div class="form-row">
-                    <div class="form-group col-sm-6 mb-3">
-                        <input type="text" name="name" class="form-control" placeholder="Your Name" required
-                            style="border-radius: 8px; border: 1px solid #ced4da; padding: 12px; transition: all 0.3s;">
-                    </div>
-                    <div class="form-group col-sm-6 mb-3">
-                        <input type="email" name="email" class="form-control" placeholder="Enter Email" required
-                            style="border-radius: 8px; border: 1px solid #ced4da; padding: 12px; transition: all 0.3s;">
-                    </div>
-                    <div class="form-group col-sm-12 mb-3">
-                        <textarea name="comment" name="comment" id="comment" rows="6" class="form-control"
-                            placeholder="Write Something" style="border-radius: 8px; border: 1px solid #ced4da; padding: 12px; transition: all 0.3s;"></textarea>
-                    </div>
-                    <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Message" class="btn btn-primary btn-lg rounded-pill"
-                            style="padding: 12px 40px; font-weight: 600; transition: all 0.3s;">
-                    </div>
+                        <div class="row g-4">
+                            <!-- Name -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                    <label for="name"><i class="bi bi-person me-2"></i>Your Name</label>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                    <label for="email"><i class="bi bi-envelope me-2"></i>Your Email</label>
+                                </div>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                    <label for="subject"><i class="bi bi-chat-dots me-2"></i>Subject</label>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 200px" required></textarea>
+                                    <label for="message"><i class="bi bi-pencil-square me-2"></i>Message</label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary px-5 py-3 rounded-pill shadow-sm fw-semibold btn-animate" type="submit">
+                                    <i class="bi bi-send me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
-    </section>
+    </div>
+    <!-- Contact End -->
 
     <!-- footer -->
     <div class="container">
