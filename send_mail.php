@@ -5,11 +5,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comment = htmlspecialchars($_POST['comment']);
 
     $to = "boharasaugat23@gmail.com";
-    $subject = "New comment from $name";
-    $body = "Name: $name\nEmail: $email\n\ncomment:\n$comment";
+    $email_subject = "New Contact Form Submission: $subject";
+
+    // Email body
+    $email_body = "
+    You have received a new message from your website contact form.
+
+    Name: $name
+    Email: $email
+
+    Comment:
+    $comment
+    ";
     $headers = "From: $email";
 
-    if (mail($to, $subject, $body, $headers)) {
+    if (mail($to, $email_subject, $email_body, $headers)) {
         echo "comment sent successfully!";
     } else {
         echo "comment sending failed.";
