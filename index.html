@@ -448,18 +448,18 @@
             <p class="section-subtitle" style="color: #6c757d; font-weight: 500; letter-spacing: 1px;">How can you communicate?</p>
             <h2 class="section-title mb-5" style="font-size: 2.5rem; font-weight: 700; color: #343a40;">Contact Me</h2>
 
-            <form action="" class="contact-form col-md-10 col-lg-8 m-auto" style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s;">
+            <form action="send_mail.php" method="POST" class="contact-form col-md-10 col-lg-8 m-auto" style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: transform 0.3s;">
                 <div class="form-row">
                     <div class="form-group col-sm-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Your Name" required
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required
                             style="border-radius: 8px; border: 1px solid #ced4da; padding: 12px; transition: all 0.3s;">
                     </div>
                     <div class="form-group col-sm-6 mb-3">
-                        <input type="email" class="form-control" placeholder="Enter Email" required
+                        <input type="email" name="email" class="form-control" placeholder="Enter Email" required
                             style="border-radius: 8px; border: 1px solid #ced4da; padding: 12px; transition: all 0.3s;">
                     </div>
                     <div class="form-group col-sm-12 mb-3">
-                        <textarea name="comment" id="comment" rows="6" class="form-control"
+                        <textarea name="comment" name="comment" id="comment" rows="6" class="form-control"
                             placeholder="Write Something" style="border-radius: 8px; border: 1px solid #ced4da; padding: 12px; transition: all 0.3s;"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
@@ -470,7 +470,6 @@
             </form>
         </div>
     </section>
-
 
     <!-- footer -->
     <div class="container">
